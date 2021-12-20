@@ -1,0 +1,45 @@
+﻿<Window x:Class="TextStrings.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextStrings"
+        mc:Ignorable="d"
+        Title="TextStrings" Height="300" Width="800">
+    <Grid x:Name="Main">
+        <!-- GRID 1 -->
+        <!-- Input header -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="InputHeader" Margin="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="242*"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="IDLabel" Text="Идентификаторы строк: " Margin="4"/>
+            <TextBox x:Name="IDBox" Grid.Column="1" Margin="0,0,8,0"/>
+            <Button x:Name="IDCount" Grid.Column="2" Content="Подсчитать" />
+        </Grid>
+        <!-- GRID 2 -->
+        <!-- Output content -->
+        <Border x:Name="ContentBorder" BorderBrush="Black" BorderThickness="1" Grid.Row="1" Margin="8">
+            <Grid x:Name="Content" Grid.Row="1" Margin="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="453*"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="NameLabel" Text="Текст" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap"/>
+                <TextBlock x:Name="WordsCountLabel" Grid.Column="1" Text="Количество слов" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap" />
+                <TextBlock x:Name="VowelCountLabel" Grid.Column="2" Text="Количество гласных" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap" />
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
