@@ -28,9 +28,9 @@
         <Border x:Name="ContentBorder" BorderBrush="Black" BorderThickness="1" Grid.Row="1" Margin="8">
             <DataGrid x:Name="ContentTable" Margin="4" BorderBrush="White" Background="White">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="1*" Header="Текст" Binding="{Binding Path=Text}"/>
-                    <DataGridTextColumn Width="0.3*" MaxWidth="150" Header="Количество слов" Binding="{Binding Path=WordsCount}"/>
-                    <DataGridTextColumn Width="0.3*" MaxWidth="150" Header="Количествол гласных" Binding="{Binding Path=Vowels}"/>
+                    <DataGridTextColumn Width="1*" Header="Текст" Binding="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Width="0.3*" MaxWidth="150" Header="Количество слов" Binding="{Binding Path=WordsCount, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Width="0.3*" MaxWidth="150" Header="Количествол гласных" Binding="{Binding Path=VowelsCount, UpdateSourceTrigger=PropertyChanged}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>

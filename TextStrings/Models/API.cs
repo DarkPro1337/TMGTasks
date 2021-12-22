@@ -19,7 +19,7 @@ namespace TextStrings.Models
 
         public async Task<List<Text>> GetTextByIdAsync(List<int> id)
         {
-            string path = "http://tmgwebtest.azurewebsites.net/api/textstrings/" + id;
+            string path = @"http://tmgwebtest.azurewebsites.net/api/textstrings/" + id;
             List<Text> result = new List<Text>();
             for (int i = 0; i < id.Count; i++)
             {
