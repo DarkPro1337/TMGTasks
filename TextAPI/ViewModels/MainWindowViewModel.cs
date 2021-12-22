@@ -20,6 +20,7 @@ namespace TextAPI.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
+        private bool idStringEmpty = true;
         private string idString;
         public string IdString
         {
@@ -34,6 +35,17 @@ namespace TextAPI.ViewModels
                         tempstr += sym.ToString();
                 }
                 idString = tempstr;
+
+                if (idString == String.Empty)
+                {
+                    idStringEmpty = true;
+                    CountCommand.RaiseCanExecuteChanged();
+                }
+                else
+                {
+                    idStringEmpty = false;
+                    CountCommand.RaiseCanExecuteChanged();
+                }
             }
         }
 
@@ -45,17 +57,14 @@ namespace TextAPI.ViewModels
         }
 
         private API ApiData { get; set; }
-        private List<Info> InfoList { get; set; }
         public MainWindowViewModel()
         {
             ApiData = new API();
-            InfoList = new List<Info>();
         }
         private DelegateCommand _countCommand;
-        
 
         public DelegateCommand CountCommand =>
-            _countCommand ?? (_countCommand = new DelegateCommand(ExecuteCountCommand));
+            _countCommand ?? (_countCommand = new DelegateCommand(ExecuteCountCommand, CanExecuteCountCommand));
 
         private async void ExecuteCountCommand()
         {
@@ -67,19 +76,24 @@ namespace TextAPI.ViewModels
             }
             catch (Exception E)
             {
-                MessageBox.Show(E.Message + " Я чайник(From server)");
+                MessageBox.Show(E.Message, "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        public static List<int> GetIntegersFromString(string FromTextBox)
+        bool CanExecuteCountCommand()
         {
-            FromTextBox = FromTextBox.Replace(" ", String.Empty);
+            return !idStringEmpty;
+        }
+
+        public static List<int> GetIntegersFromString(string Text)
+        {
+            Text = Text.Replace(" ", String.Empty);
             try
             {
                 List<int> listWithoutDublicate = new List<int>();
                 char[] decidersArray = { ',', ';' };
 
-                List<int> list = new List<int>(FromTextBox.Split(decidersArray).Select(int.Parse));
+                List<int> list = new List<int>(Text.Split(decidersArray).Select(int.Parse));
                 foreach (var item in list)
                 {
                     if (item >= 1 & item <= 20)
@@ -93,7 +107,7 @@ namespace TextAPI.ViewModels
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message, "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return new List<int>();
             }
 
