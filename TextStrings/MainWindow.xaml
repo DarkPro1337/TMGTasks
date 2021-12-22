@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TextStrings"
         mc:Ignorable="d"
-        Title="TextStrings" Height="300" Width="800">
+        Title="TextStrings" Height="300" Width="800" WindowStartupLocation="CenterScreen">
     <Grid x:Name="Main">
         <!-- GRID 1 -->
         <!-- Input header -->
@@ -21,25 +21,18 @@
             </Grid.ColumnDefinitions>
             <TextBlock x:Name="IDLabel" Text="Идентификаторы строк: " Margin="4"/>
             <TextBox x:Name="IDBox" Grid.Column="1" Margin="0,0,8,0"/>
-            <Button x:Name="IDCount" Grid.Column="2" Content="Подсчитать" />
+            <Button x:Name="IDCount" Grid.Column="2" Content="Подсчитать" Command="{Binding Count}" />
         </Grid>
         <!-- GRID 2 -->
         <!-- Output content -->
         <Border x:Name="ContentBorder" BorderBrush="Black" BorderThickness="1" Grid.Row="1" Margin="8">
-            <Grid x:Name="Content" Grid.Row="1" Margin="4">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="453*"/>
-                    <ColumnDefinition Width="80"/>
-                    <ColumnDefinition Width="80"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <TextBlock x:Name="NameLabel" Text="Текст" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap"/>
-                <TextBlock x:Name="WordsCountLabel" Grid.Column="1" Text="Количество слов" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap" />
-                <TextBlock x:Name="VowelCountLabel" Grid.Column="2" Text="Количество гласных" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap" />
-            </Grid>
+            <DataGrid x:Name="ContentTable" Margin="4" BorderBrush="White" Background="White">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="1*" Header="Текст" Binding="{Binding Path=Text}"/>
+                    <DataGridTextColumn Width="0.3*" MaxWidth="150" Header="Количество слов" Binding="{Binding Path=WordsCount}"/>
+                    <DataGridTextColumn Width="0.3*" MaxWidth="150" Header="Количествол гласных" Binding="{Binding Path=Vowels}"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Border>
     </Grid>
 </Window>

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TextStrings
+namespace TextStrings.ViewModels
 {
-    internal class MainWindowViewModel
+    public class MainWindowViewModel
     {
+
     }
 }
