@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Artem\\.nuget\\packages\\": {}
+    "C:\\Users\\darkpro1337\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Artem\\source\\repos\\TMGTasks\\TextStrings\\TextStrings.csproj",
+      "projectUniqueName": "D:\\Visual Studio Projects\\TMGTasks\\TextStrings\\TextStrings.csproj",
       "projectName": "TextStrings",
-      "projectPath": "C:\\Users\\Artem\\source\\repos\\TMGTasks\\TextStrings\\TextStrings.csproj",
-      "packagesPath": "C:\\Users\\Artem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Artem\\source\\repos\\TMGTasks\\TextStrings\\obj\\",
+      "projectPath": "D:\\Visual Studio Projects\\TMGTasks\\TextStrings\\TextStrings.csproj",
+      "packagesPath": "C:\\Users\\darkpro1337\\.nuget\\packages\\",
+      "outputPath": "D:\\Visual Studio Projects\\TMGTasks\\TextStrings\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Artem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\darkpro1337\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

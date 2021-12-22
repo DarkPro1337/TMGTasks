@@ -19,3 +19,11 @@ C:\Users\Artem\source\repos\TMGTasks\TextStrings\obj\Debug\net6.0-windows\TextSt
 C:\Users\Artem\source\repos\TMGTasks\TextStrings\obj\Debug\net6.0-windows\ref\TextStrings.dll
 C:\Users\Artem\source\repos\TMGTasks\TextStrings\obj\Debug\net6.0-windows\TextStrings.pdb
 C:\Users\Artem\source\repos\TMGTasks\TextStrings\obj\Debug\net6.0-windows\TextStrings.genruntimeconfig.cache
+D:\Visual Studio Projects\TMGTasks\TextStrings\obj\Debug\net6.0-windows\TextStrings.csproj.AssemblyReference.cache
+D:\Visual Studio Projects\TMGTasks\TextStrings\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+D:\Visual Studio Projects\TMGTasks\TextStrings\obj\Debug\net6.0-windows\App.g.cs
+D:\Visual Studio Projects\TMGTasks\TextStrings\obj\Debug\net6.0-windows\TextStrings_MarkupCompile.cache
+D:\Visual Studio Projects\TMGTasks\TextStrings\obj\Debug\net6.0-windows\TextStrings_MarkupCompile.lref
+D:\Visual Studio Projects\TMGTasks\TextStrings\obj\Debug\net6.0-windows\TextStrings.dll
+D:\Visual Studio Projects\TMGTasks\TextStrings\obj\Debug\net6.0-windows\ref\TextStrings.dll
+D:\Visual Studio Projects\TMGTasks\TextStrings\obj\Debug\net6.0-windows\TextStrings.pdb
