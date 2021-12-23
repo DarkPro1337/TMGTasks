@@ -7,8 +7,13 @@ namespace TextAPI.Data
 {
     public class API
     {
+        /// <summary>
+        /// The HTTP client.
+        /// </summary>
         public static HttpClient _client;
 
+        // API Headers declaration.
+        // Used to connect remote Azure API.
         public API()
         {
             _client = new HttpClient();
@@ -17,6 +22,11 @@ namespace TextAPI.Data
             _client.DefaultRequestHeaders.Add(key, value);
         }
 
+        /// <summary>
+        /// Getting text by ID from remote Azure server.
+        /// </summary>
+        /// <param name="id">ID for a string</param>
+        /// <returns>Returns deserialazed string from JSON</returns>
         public async Task<List<Text>> GetTextByIdAsync(List<int> id)
         {
             string path = @"http://tmgwebtest.azurewebsites.net/api/textstrings/" + id;
