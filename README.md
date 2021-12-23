@@ -1,5 +1,5 @@
 # TMGTasks
-Тестовые для TMG
+Тестовые для The Most Games
 
 ## Навигация:
 * [Задание 1](TextAPI)

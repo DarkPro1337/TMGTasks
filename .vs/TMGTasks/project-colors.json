@@ -15,7 +15,22 @@
       "ProjectGuid": "9a9989a5-ca6a-4450-a472-fd997192f7b3",
       "DisplayName": "TextAPI",
       "ColorIndex": 1
+    },
+    "a4224b58-0794-47da-8e80-a06c530fd4cc": {
+      "ProjectGuid": "a4224b58-0794-47da-8e80-a06c530fd4cc",
+      "DisplayName": "LOCtoXLSX",
+      "ColorIndex": 2
+    },
+    "9f5aacf3-b4a3-439e-9f1a-3608904be2ec": {
+      "ProjectGuid": "9f5aacf3-b4a3-439e-9f1a-3608904be2ec",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 3
+    },
+    "6d4ddfd7-b3f5-4854-9bc9-8a88945fb6f9": {
+      "ProjectGuid": "6d4ddfd7-b3f5-4854-9bc9-8a88945fb6f9",
+      "DisplayName": "PetrenkoGoltsman",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 5
 }

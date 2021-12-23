@@ -8,3 +8,17 @@
 Задача «Б». Свести содержимое всех упомянутых файлов в один файл формата Excel, чтобы все строки было там удобно редактировать. После окончания редактуры вставить изменённый текст обратно в исходные файлы.
 
 Опишите (словами, писать код нет необходимости), как вы будете решать задачи «А» и «Б». Будьте кратки, но постарайтесь указать все существенные детали.
+
+# Решение
+#### Задача "А":
+Так как batch07-de.loc представляет собой JSON файл - необходимо сначала преобразовать JSON в CSV, а затем CSV файл можно будет преобразовать в XLSX или XLS формат.
+
+В результате преобразования получится вот такая таблица:
+
+|Source Text                                                                                                                           |Translation Text                                                                                                                                                          |Key                             |
+|--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
+|Hello there! I am Maya the Bee! And today is a very special day: It's my birthday!                                                    |Hallo du! Ich bin die Biene Maja! Heute ist ein ganz besonderer Tag: Ich habe nämlich Geburtstag!                                                                         |E5393056418B2D756E5DFC89601560F7|
+|Therefore, I would like to invite all my friends over! Because they are all so honeysweet!                                            |Dafür will ich alle meine Freunde einladen! Die habe ich nämlich alle sooo honiggern.                                                                                     |E9B12EB84AB562757D4A85809962BA6B|
+|We still need a lot of things to make this the most sun-tastic party in the whole poppy field. Will you help me prepare?              |Damit das die sonnenschönste Feier der ganzen Klatschmohnwiese wird, brauchen wir aber noch ganz viele Dinge, um die Gäste zu unterhalten. Hilfst du mir beim Vorbereiten?|E18604644CC8E71DC5C57793FE7801F4|
+
+Исходный JSON файл имеет `Subnamespaces` их можно разделить как разделы на главном листе. В этом кроется основной нюанс.
