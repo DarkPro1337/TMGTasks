@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32002.261
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAPI", "TextAPI\TextAPI.csproj", "{9A9989A5-CA6A-4450-A472-FD997192F7B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextAPI", "TextAPI\TextAPI.csproj", "{9A9989A5-CA6A-4450-A472-FD997192F7B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LOCtoXLSX", "LOCtoXLSX", "{A4224B58-0794-47DA-8E80-A06C530FD4CC}"
+	ProjectSection(SolutionItems) = preProject
+		LOCtoXLSX\README.md = LOCtoXLSX\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetrenkoGoltsman", "PetrenkoGoltsman\PetrenkoGoltsman.csproj", "{6D4DDFD7-B3F5-4854-9BC9-8A88945FB6F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,10 @@ Global
 		{9A9989A5-CA6A-4450-A472-FD997192F7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A9989A5-CA6A-4450-A472-FD997192F7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A9989A5-CA6A-4450-A472-FD997192F7B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D4DDFD7-B3F5-4854-9BC9-8A88945FB6F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D4DDFD7-B3F5-4854-9BC9-8A88945FB6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D4DDFD7-B3F5-4854-9BC9-8A88945FB6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D4DDFD7-B3F5-4854-9BC9-8A88945FB6F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
