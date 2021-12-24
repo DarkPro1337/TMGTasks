@@ -52,7 +52,8 @@
                     BorderBrush="White" 
                     Background="White" 
                     AutoGenerateColumns="False" 
-                    ItemsSource="{Binding ContentList}">
+                    ItemsSource="{Binding ContentList}"
+                    IsReadOnly="True">
                     <DataGrid.Columns>
                         <DataGridTextColumn 
                             Width="1*" 
