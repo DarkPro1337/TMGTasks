@@ -20,6 +20,7 @@ namespace PetrenkoGoltsman
             MatchCollection matches = regEx.Matches(input); // Match the RegEx.
             IEnumerable<string> result = matches.Cast<Match>().Select(m => m.Value); // Cast matches to string type.
             string output = string.Join("", result); // Join result string.
+
             return output; // Return result.
         }
 
@@ -71,10 +72,10 @@ namespace PetrenkoGoltsman
         public static float Calculate(string input)
         {
             float index = 0f; // Declare index.
-            int counter = 0; // Declare counter.
+            int counter = 1; // Declare counter.
             string clean = GetCharactersOnly(input); // Declare clean string.
 
-            foreach (char c in input)
+            foreach (char c in clean)
             {
                 index += 0.5f * counter; // Calculate index.
                 counter += 2; // Calculate counter.
@@ -91,8 +92,8 @@ namespace PetrenkoGoltsman
         /// <returns>index <c>float</c></returns>
         public static float CalculateWithComment(string input)
         {
-            string before = CommentBeforeTrim(input); // Declare string comment trim;
-            string after = CommentAfterTrim(input); // Declare string comment itself;
+            string before = (input); // Declare string comment trim;
+            string after = CommentBeforeTrim(input); // Declare string comment itself;
 
             float index = Calculate(before) + Calculate(after); // Calculate indexes on before and after;
 
