@@ -4,6 +4,9 @@ using System.Text.RegularExpressions;
 
 namespace PetrenkoGoltsman
 {
+    /// <summary>
+    /// Petrenko-Goltsman index calculation and utility class.
+    /// </summary>
     public class Index
     {
         /// <summary>
